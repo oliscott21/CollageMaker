@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        app:layout_constraintBottom_toTopOf="@id/share_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:textSize="22pt"
+        style="@style/font"
+        />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:textSize="10pt"
+        android:text="@string/share_btn"
+        style="@style/font"
+        android:backgroundTint="@color/blue_var1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:onClick="shareClick"
+        />
+
+    <ImageView
+        android:id="@+id/image_1"
+        android:src="@drawable/neon_1"
+        android:contentDescription="@string/des"
+        android:paddingTop="25dp"
+        style="@style/image_style"
+        app:layout_constraintBottom_toTopOf="@id/image_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_2"
+        app:layout_constraintTop_toBottomOf="@id/share_button"
+        android:onClick="imageClick"
+        />
+
+    <ImageView
+        android:id="@+id/image_2"
+        android:src="@drawable/neon_2"
+        android:contentDescription="@string/des"
+        android:paddingTop="25dp"
+        style="@style/image_style"
+        app:layout_constraintBottom_toTopOf="@id/image_4"
+        app:layout_constraintStart_toEndOf="@id/image_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/share_button"
+        android:onClick="imageClick"
+        />
+
+    <ImageView
+        android:id="@+id/image_3"
+        android:src="@drawable/neon_3"
+        android:contentDescription="@string/des"
+        android:paddingBottom="25dp"
+        style="@style/image_style"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_4"
+        app:layout_constraintTop_toBottomOf="@id/image_1"
+        android:onClick="imageClick"
+        />
+
+    <ImageView
+        android:id="@+id/image_4"
+        android:src="@drawable/neon_4"
+        android:contentDescription="@string/des"
+        android:paddingBottom="25dp"
+        style="@style/image_style"
+        app:layout_constraintStart_toEndOf="@id/image_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_3"
+        android:onClick="imageClick"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
